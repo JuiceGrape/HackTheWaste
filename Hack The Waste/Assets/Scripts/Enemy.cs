@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
+
+    [SerializeField]private bool IsRecyclable;
     [SerializeField]private int Damage;
     [SerializeField]private int Speed;
     
