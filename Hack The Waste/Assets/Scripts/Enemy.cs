@@ -5,15 +5,17 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     [SerializeField]private int Damage;
-    private GameObject player;
     [SerializeField]private int Speed;
     
     private GameObject Player;
     private bool AllowedToMove = false;
-    
 
-	// Use this for initialization
-	void Start () {
+    [HideInInspector]public GameObject player;
+
+
+
+    // Use this for initialization
+    void Start () {
         
 	}
 	
@@ -54,6 +56,11 @@ public class Enemy : MonoBehaviour {
     {
         this.player = player;
         AllowedToMove = true;
+    }
+
+    public virtual void DestroyEnemy()
+    {
+        Destroy(this);
     }
 
 }
