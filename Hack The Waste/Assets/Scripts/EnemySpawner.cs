@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
 
-    [SerializeField]private GameObject Player;
+    [SerializeField]private Enemy RecycledWaste;
+    [SerializeField]private Player Player;
     public List<EnemyWave> EnemyWaves;
     [Tooltip("Time in seconds untill the next enemy spawns")]
     public float TimeToSpawn;
@@ -56,5 +57,10 @@ public class EnemySpawner : MonoBehaviour {
         Vector3 Location = new Vector3(0, 0, 0);
 
         return Location;
+    }
+
+    public void AddRecycledMaterial()
+    {
+        EnemyWaves[RoundNumber].Enemies.Add(RecycledWaste);
     }
 }

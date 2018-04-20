@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 61875625453496012}
   - component: {fileID: 50357005794745932}
   m_Layer: 0
-  m_Name: Plastic Bottle
+  m_Name: RecycledPlastic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 1020048617249532}
-  IsRecyclable: 1
+  IsRecyclable: 0
   Damage: 3
   Speed: 2
   player: {fileID: 0}
