@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     [SerializeField]private int Damage;
-    [SerializeField]private GameObject player;
+    private GameObject player;
     [SerializeField]private int Speed;
     
     private GameObject Player;
@@ -55,4 +55,5 @@ public class Enemy : MonoBehaviour {
         this.player = player;
         AllowedToMove = true;
     }
+
 }
