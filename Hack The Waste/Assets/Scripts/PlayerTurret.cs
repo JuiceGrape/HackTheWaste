@@ -65,7 +65,6 @@ public class PlayerTurret : MonoBehaviour
 			Vector3 mousePosition = Camera.main.ScreenToWorldPoint(v);
  			Quaternion rot = Quaternion.LookRotation (mousePosition - transform.position, transform.TransformDirection(Vector3.forward));
  			turretChildTransform.transform.rotation = new Quaternion(0, 0, rot.z, rot.w);
-			turretChildTransform.transform.Rotate(new Vector3(0,0,-90));
 		}
 	}
 }

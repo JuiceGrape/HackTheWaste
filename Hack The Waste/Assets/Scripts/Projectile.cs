@@ -21,7 +21,7 @@ public class Projectile : MonoBehaviour
 
 		renderer = GetComponent<SpriteRenderer>();
 
-		rigidbody2D.velocity = Vector2.up * speed;
+		rigidbody2D.velocity = transform.right * speed;
 	}
 
 	public Sprite GetSprite()
@@ -33,7 +33,6 @@ public class Projectile : MonoBehaviour
 	{
 		this.player = player;
 		this.environment = environment;
-		
 	}
 
 
