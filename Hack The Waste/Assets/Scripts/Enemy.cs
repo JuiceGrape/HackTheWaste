@@ -4,47 +4,55 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-    [SerializeField]int Damage;
-
-    public delegate void DealDamage(int amount);
-    public static event DealDamage dealDamage;
+    [SerializeField]private int Damage;
+    [SerializeField]private GameObject player;
+    [SerializeField]private int Speed;
+    
+    private GameObject Player;
+    private bool AllowedToMove = false;
+    
 
 	// Use this for initialization
 	void Start () {
-		
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (AllowedToMove)
+        {
+            GoToPlayer();
+        }
 	}
 
     private void GoToPlayer()
     {
-
+        this.transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position, Speed * Time.deltaTime);
     }
 
     private void dealDamageToPlayer()
     {
-        dealDamage(this.Damage);
+        //TODO
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("trigger");
         if (collision.transform.tag == "Player")
         {
-            Debug.Log("oh");
+            dealDamageToPlayer();
+            Destroy(this.gameObject);
+        }
+
+        if (collision.transform.tag == "Bullet")
+        {
+            //TODO. 
+            Debug.Log("TODO once I know what bullets do");
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void SetPlayer(GameObject player)
     {
-
-        Debug.Log("Collision");
-        if (collision.transform.tag == "Player")
-        {
-            Debug.Log("oh");
-        }
+        this.player = player;
+        AllowedToMove = true;
     }
 }
