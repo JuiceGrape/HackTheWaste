@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerTurret : MonoBehaviour
 {
 	public Transform projectileParent;
+	public Transform projectileSpawn;
 	public GameObject[] projectilePrefabs;
 	private int selectedWeapon = 0;
 	private Camera mainCamera;
@@ -44,7 +45,7 @@ public class PlayerTurret : MonoBehaviour
 
 				var obj = Instantiate(projectilePrefabs[selectedWeapon]);
 				obj.transform.rotation = turretChildTransform.rotation;
-				obj.transform.position = turretChildTransform.position;
+				obj.transform.position = projectileSpawn.position;
 				if(projectileParent != null) obj.transform.parent = projectileParent;
 			}
 		}

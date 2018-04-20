@@ -35,9 +35,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4740397918974240}
-  - component: {fileID: 114415210753243672}
   - component: {fileID: 61875625453496012}
   - component: {fileID: 50357005794745932}
+  - component: {fileID: 114375943646581142}
   m_Layer: 0
   m_Name: Plastic Bottle
   m_TagString: Untagged
@@ -117,7 +117,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114415210753243672
+--- !u!114 &114375943646581142
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -125,14 +125,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1612168833880750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a085d5422e847634180bba5b1ced483e, type: 3}
+  m_Script: {fileID: 11500000, guid: b5c3fa08d55780541aeb3b99108fba13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 3
-  player: {fileID: 0}
-  Speed: 2
-  test: {fileID: 1612168833880750}
-  spawn: {fileID: 0}
+  Damage: 1
+  Speed: 1
 --- !u!212 &212478357482302582
 SpriteRenderer:
   m_ObjectHideFlags: 1

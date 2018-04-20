@@ -45,15 +45,9 @@ public class Projectile : MonoBehaviour
 		}
     }
 
-
-
-
 	protected virtual void Hit(Enemy enemy)
 	{
-		 //enemy.DestroyEnemy();
+		//  enemy.DestroyEnemy();
 		 Destroy(this.gameObject);
 	}
-
-
-
 }
