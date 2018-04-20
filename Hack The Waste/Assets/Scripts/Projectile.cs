@@ -6,8 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof (SpriteRenderer))]
 public class Projectile : MonoBehaviour 
 {
-	private Vector2 movement;
-
 	protected Player player;
 	protected Environment environment;
 
@@ -22,6 +20,8 @@ public class Projectile : MonoBehaviour
 		rigidbody2D.gravityScale = 0;
 
 		renderer = GetComponent<SpriteRenderer>();
+
+		rigidbody2D.velocity = Vector2.up * speed;
 	}
 
 	public Sprite GetSprite()
@@ -29,18 +29,13 @@ public class Projectile : MonoBehaviour
 		return renderer.sprite;
 	}
 
-	public void create(Environment environment, Player player, Vector2 movement)
+	public void create(Environment environment, Player player)
 	{
 		this.player = player;
-		setMovement(movement);
 		this.environment = environment;
+		
 	}
 
-	private void setMovement(Vector2 movement)
-	{
-		this.movement = movement.normalized * speed;
-		rigidbody2D.velocity = this.movement;
-	}
 
 	void OnTriggerEnter2D(Collider2D collider2D)
     {
