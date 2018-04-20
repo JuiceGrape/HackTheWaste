@@ -11,10 +11,9 @@ public class Enemy : MonoBehaviour {
     [SerializeField]private int Damage;
     [SerializeField]private int Speed;
     
-    private GameObject Player;
     private bool AllowedToMove = false;
 
-    [HideInInspector]public GameObject player;
+    [HideInInspector]public Player player;
 
 
 
@@ -44,7 +43,7 @@ public class Enemy : MonoBehaviour {
 
     private void dealDamageToPlayer()
     {
-        //TODO
+        player.GetHit(this.Damage);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,7 +61,7 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    public void SetPlayer(GameObject player)
+    public void SetPlayer(Player player)
     {
         this.player = player;
         AllowedToMove = true;
@@ -70,7 +69,15 @@ public class Enemy : MonoBehaviour {
 
     public virtual void DestroyEnemy()
     {
-        Destroy(this);
+        Destroy(this.gameObject);
+    }
+
+    public void RecycleEnemy()
+    {
+        if (this.IsRecyclable)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 }

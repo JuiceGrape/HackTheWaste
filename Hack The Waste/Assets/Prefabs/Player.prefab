@@ -20,13 +20,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4852371952601524}
   - component: {fileID: 50223455247413302}
-  - component: {fileID: 114555920514149660}
-  - component: {fileID: 114316723603187026}
-  - component: {fileID: 114702670454028118}
-  - component: {fileID: 114419161363929530}
+  - component: {fileID: 114196741601736488}
+  - component: {fileID: 114784273823675850}
+  - component: {fileID: 114290212431800768}
+  - component: {fileID: 114630905955186752}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114316723603187026
+--- !u!114 &114196741601736488
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -161,18 +161,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1068984754462926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66d99de65d9353e4b98d7bb39105944e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6792fe0f279188248a862347179b09ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileParent: {fileID: 0}
-  projectileSpawn: {fileID: 4793128761268460}
-  projectilePrefabs:
-  - {fileID: 1419163311797734, guid: 452e6c17d8bce0641822202edb398561, type: 2}
-  - {fileID: 1121505493785016, guid: 4d7afbcf77e01b74c85808aad161fa93, type: 2}
-  turretChildTransform: {fileID: 4750816543662184}
-  usingController: 1
-  shootDelayMax: 0.2
---- !u!114 &114419161363929530
+  moveSpeed: 5
+--- !u!114 &114290212431800768
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -180,19 +173,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 1068984754462926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9450994e4c1c2c4f9a2d9627eb17a04, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ae746dc284f949449104cc003007bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: {fileID: 114630905955186752}
+--- !u!114 &114630905955186752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1068984754462926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69570dbabc5714b46896961a6cdcc157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   quantity: 30
   InitialQuantity: 30
   maxResource: 30
-  minResource: 0
+  minResource: 30
   OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114555920514149660
+--- !u!114 &114784273823675850
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -200,22 +205,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1068984754462926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9252bd8c8881f541b3a84b7720f353a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d3096b1f8045694a9272303175a2802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
---- !u!114 &114702670454028118
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1068984754462926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57c2f127c4dfc8140bf0b8900945f23d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: {fileID: 114419161363929530}
+  projectileParent: {fileID: 0}
+  projectileSpawn: {fileID: 4793128761268460}
+  projectilePrefabs:
+  - {fileID: 1419163311797734, guid: b77f81375004f0a4e9bb08dca0b442ba, type: 2}
+  turretChildTransform: {fileID: 4750816543662184}
+  usingController: 1
+  shootDelayMax: 0.2
 --- !u!212 &212374544005509470
 SpriteRenderer:
   m_ObjectHideFlags: 1
