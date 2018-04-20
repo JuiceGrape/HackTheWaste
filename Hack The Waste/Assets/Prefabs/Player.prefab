@@ -133,8 +133,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d99de65d9353e4b98d7bb39105944e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileParent: {fileID: 0}
+  projectilePrefabs:
+  - {fileID: 1121505493785016, guid: 4d7afbcf77e01b74c85808aad161fa93, type: 2}
   turretChildTransform: {fileID: 4750816543662184}
-  usingController: 0
+  usingController: 1
+  shootDelayMax: 0.2
 --- !u!114 &114555920514149660
 MonoBehaviour:
   m_ObjectHideFlags: 1
