@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
 
+    public GameObject sprite;
+
     [SerializeField]private bool IsRecyclable;
     [SerializeField]private int Damage;
     [SerializeField]private int Speed;
@@ -27,7 +29,13 @@ public class Enemy : MonoBehaviour {
         {
             GoToPlayer();
         }
+        RotateSprite();
 	}
+
+    private void RotateSprite()
+    {
+        sprite.transform.Rotate(0, 0, -20, 0);
+    }
 
     private void GoToPlayer()
     {
