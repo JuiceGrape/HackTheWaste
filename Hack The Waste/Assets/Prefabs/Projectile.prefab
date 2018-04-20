@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212969100262288202}
   - component: {fileID: 50609740675746584}
   - component: {fileID: 58346923374163562}
-  - component: {fileID: 114876872400187718}
+  - component: {fileID: 114076528667167232}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -78,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &114876872400187718
+--- !u!114 &114076528667167232
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,10 +86,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1419163311797734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6055480a023736840bbecb5ef33a596c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c2c60fdb147c3d48be856aa0b1bd8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 2
 --- !u!212 &212969100262288202
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -124,7 +124,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a01ab5ba29f03742b35afaba83ac218, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be053607c33a44d43904d057f27858a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
